@@ -3,6 +3,15 @@
 x=$1
 n=0
 
+if [ -z $x ]; then
+
+	echo Este script exige que seja passado pelo menos 1 parametro para sua execução.
+	echo Exemplo de entrada:
+	echo $0 1
+	echo Isto fará o loop do programa ser executado 1 vez.
+	exit;
+fi
+
 while [ $n -lt $x ]; do
 
         let n=n+1;
